@@ -8,4 +8,4 @@ EXPOSE 8501
 
 RUN pip install -r requirements.txt
 
-CMD python -m streamlit run server.py
+CMD streamlit run server.py
