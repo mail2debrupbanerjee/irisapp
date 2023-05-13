@@ -1,27 +1,14 @@
 import streamlit as st 
-#from flask import Flask
 import pickle
 
-
-#app = Flask(__name__)
 print('Successfully executed ')
 
 model = pickle.load(open('model.pkl', 'rb'))
-# labels ={
-#   0: "setosa",
-#   1: "versicolor",
-#   2: "virginica"
-# }
 
-#@app.route('/')
-# def welcome():
-#     return "Index Page"
-
-#@app.route('/predict',methods=['POST'])
 def predict(sl,sw,pl,pw):
     prediction=model.predict([[sl,sw,pl,pw]])
     return prediction
-    #[prediction[0]]
+    
 def main():
     st.title("IRIS Prediction")
     html_temp = """
@@ -42,5 +29,4 @@ def main():
         st.text("Lets LEarn")
         st.text("Built with Streamlit")
 
-#if __name__=='__main__':
 main()

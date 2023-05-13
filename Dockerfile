@@ -1,11 +1,10 @@
-FROM python
+FROM python 
 
-WORKDIR /proj1
+WORKDIR /irissourceapp
 
-COPY . /proj1/
+COPY . /iriscontainerpp
 
-EXPOSE 8501
-
+RUN echo 'NOW STARTING TO RUN PIP INSTALL REQUIREMENTS.TXT...'
 RUN pip install -r requirements.txt
 
 CMD streamlit run server.py
