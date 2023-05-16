@@ -1,10 +1,9 @@
 FROM python 
 
-WORKDIR /irissourceapp
+WORKDIR /irisapp
 
-COPY . /iriscontainerpp
+COPY . /irisapp
 
-RUN echo 'NOW STARTING TO RUN PIP INSTALL REQUIREMENTS.TXT...'
-RUN pip install -r requirements.txt
+RUN pip install -r ipiC:\Users\Debrup\Desktop\NMIMS\BootCamp\NMIMS-bootcamp-May23\NMIMS PDB May 23\DevOps Activity\iris_new\requirements.txt
 
 CMD streamlit run server.py
